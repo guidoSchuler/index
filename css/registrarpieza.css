@@ -1,0 +1,147 @@
+/* Estilo global para el cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado principal */
+h1 {
+    color: #1a3b5d;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo del botón "Atrás" */
+.atras-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px; /* A la izquierda del encabezado */
+    background-color: #e74c3c; /* Color rojo claro */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover para el botón "Atrás" */
+.atras-btn:hover {
+    background-color: #c0392b; /* Rojo más oscuro al pasar el cursor */
+}
+
+/* Estilos del encabezado general */
+header {
+    position: relative;
+    background-color: rgba(44, 62, 80, 0.7); /* Fondo semi-transparente */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* Contenedor principal con dos columnas */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Contenedor del formulario de registro de pieza */
+.registro-pieza-container {
+    width: 45%;
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de las últimas piezas creadas */
+.ultimas-piezas-container {
+    width: 45%;
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #1a3b5d;
+    margin-bottom: 5px;
+}
+
+input, select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Botón principal para el formulario */
+.btn-primary {
+    background-color: #1a3b5d;
+    color: white;
+    padding: 15px 0;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #14426c;
+}
+
+/* Tabla de las últimas piezas creadas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+table th {
+    background-color: #1a73e8;
+    color: white;
+}
+
+table tr:hover {
+    background-color: #eaf1f9;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+    background-color: #f9fbfd;
+    border-top: 1px solid #ddd;
+    color: #555;
+}

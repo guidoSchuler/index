@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Registrar Pieza a fabricar</title>
+    <link rel="stylesheet" href="../css/registrarpieza.css">
+</head>
+<body>
+    <header>
+        <a href="../html/index.html" class="atras-btn">Atrás</a>
+        <h1>Registrar Pieza a Fabricar</h1>
+    </header>
+
+    <div class="container">
+        <!-- Registro de Pieza -->
+        <div class="registro-pieza-container">
+            <h2>Registrar Nueva Pieza a fabricar</h2>
+            <form>
+                <label for="numero_plano">Número de Plano:</label>
+                <input type="text" id="numero_plano" name="numero_plano" required>
+
+                <label for="numero_plano_cliente">Número de Plano Cliente:</label>
+                <input type="text" id="numero_plano_cliente" name="numero_plano_cliente" required>
+
+                <label for="cliente">Cliente:</label>
+                <input type="text" id="cliente" name="cliente" required>
+
+                <label for="fecha_inicio">Fecha de Inicio:</label>
+                <input type="datetime-local" id="fecha_inicio" name="fecha_inicio" required>
+
+                <label for="numero_pedido">Nº de Pedido:</label>
+                <input type="number" id="numero_pedido" name="numero_pedido" required>
+
+                <label for="orden_fabricacion">Orden de Fabricación:</label>
+                <input type="number" id="orden_fabricacion" name="orden_fabricacion" value="1" readonly>
+
+                <label for="designacion">Designación:</label>
+                <input type="text" id="designacion" name="designacion" required>
+
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" required>
+
+                <label for="material">Material:</label>
+                <input type="text" id="material" name="material" required>
+
+                <label for="dimensiones">Dimensiones:</label>
+                <input type="text" id="dimensiones" name="dimensiones" required>
+
+                <button type="submit" class="btn-primary">Crear Pieza</button>
+            </form>
+        </div>
+
+        <!-- Últimas Piezas Creadas -->
+        <div class="ultimas-piezas-container">
+            <h2>Últimas Piezas Creadas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Número de Plano</th>
+                        <th>Número de Plano Cliente</th>
+                        <th>Cliente</th>
+                        <th>Número de Pedido</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>D137500000</td>
+                        <td>P132400009</td>
+                        <td>Scania S.A.</td>
+                        <td>866</td>
+                    </tr>
+                    <tr>
+                        <td>S060600000</td>
+                        <td>P789400006</td>
+                        <td>Kennametal</td>
+                        <td>678</td>
+                    </tr>
+                    <tr>
+                        <td>D138500001</td>
+                        <td>P234500001</td>
+                        <td>Scania S.A.</td>
+                        <td>789</td>
+                    </tr>
+                    <tr>
+                        <td>D138500002</td>
+                        <td>P234500002</td>
+                        <td>Scania S.A.</td>
+                        <td>790</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Pedro Giacomelli S.A</p>
+    </footer>
+</body>
+</html>

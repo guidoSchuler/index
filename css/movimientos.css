@@ -1,0 +1,211 @@
+/* Estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header h1 {
+    color: #1a3b5d;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo del botón "Atrás" */
+.atras-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px; /* A la izquierda del encabezado */
+    background-color: #e74c3c; /* Color rojo claro */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover para el botón "Atrás" */
+.atras-btn:hover {
+    background-color: #c0392b; /* Rojo más oscuro al pasar el cursor */
+}
+
+/* Estilos del encabezado general */
+header {
+    position: relative;
+    background-color: rgba(44, 62, 80, 0.7); /* Fondo semi-transparente */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Contenedor del formulario de registro */
+.registro-container {
+    width: 50%; /* Reducir el ancho para centrar */
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px auto; /* Centrar el formulario horizontalmente */
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Asegurar que los elementos del formulario estén centrados */
+}
+
+/* Formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; /* Asegurar que los inputs estén centrados */
+}
+
+label {
+    font-weight: bold;
+    color: #1a3b5d;
+    display: block; /* Asegura que los labels estén alineados correctamente */
+}
+
+input, select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px; /* Ajustar el ancho máximo de los campos */
+}
+
+/* Botón de búsqueda o enviar */
+.btn-primary {
+    background-color: #1a3b5d;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #14426c;
+}
+
+/* Contenedor de la lista de piezas en producción y resultados de búsqueda */
+.resultados-container, .lista-piezas-container {
+    width: 65%; /* Reducido a 65% para centrar y hacer menos ancho */
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px auto; /* Margen automático para centrar */
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabla de producción */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+table th {
+    background-color: #1a73e8;
+    color: white;
+}
+
+/* Estilo de las celdas de fechas y inputs */
+table td input[type="datetime-local"],
+table td input[type="text"] {
+    width: 100%; /* Asegura que los inputs ocupen todo el espacio disponible */
+    padding: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+table td input[type="text"] {
+    width: 95%;
+}
+
+/* Estilo de las celdas en columnas */
+table td {
+    vertical-align: middle; /* Centra verticalmente el contenido de las celdas */
+}
+
+/* Botones de las acciones */
+table td button {
+    margin: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+button.guardar-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+button.editar-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+button.cerrar-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8; /* Ligero efecto hover */
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+    background-color: #f9fbfd;
+    border-top: 1px solid #ddd;
+    color: #555;
+}
+
+/* --- CSS responsive para pantallas pequeñas --- */
+@media (max-width: 768px) {
+    .buscador-container, .resultados-container, .lista-piezas-container {
+        width: 95%; /* Ajusta el contenedor en pantallas pequeñas */
+        padding: 10px;
+    }
+
+    .registro-container {
+        width: 90%; /* Ajustar el ancho en pantallas pequeñas */
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    input, select, .btn-primary {
+        width: 100%; /* Formularios y botones al 100% del ancho en pantallas pequeñas */
+        margin-bottom: 10px;
+    }
+
+    table th, table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}

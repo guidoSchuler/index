@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerencia - Lista de Informes</title>
+    <link rel="stylesheet" href="../css/gerencia.css">
+</head>
+<body>
+    <header>
+        <a href="../html/index.html" class="atras-btn">Atrás</a>
+        <h1>Lista de informes</h1>
+    </header>
+
+    <!-- Formulario de búsqueda -->
+    <div class="buscador-container">
+        <h2>Buscar en la fabricación</h2>
+        <form id="buscarFormulario" onsubmit="buscar(); return false;">
+            <!-- Selector de tipo de búsqueda -->
+            <label for="criterioBusqueda">Buscar por:</label>
+            <select id="criterioBusqueda" name="criterioBusqueda" onchange="actualizarOpcionesBusqueda()">
+                <option value="">Elegir</option> <!-- Opción en blanco -->
+                <option value="todas">Todas</option>
+                <option value="numeroPlano">Número de Plano</option>
+                <option value="numeroPlanoCliente">Número de Plano del Cliente</option>
+                <option value="cliente">Cliente</option>
+                <option value="numeroPedido">Número de Pedido</option>
+                <option value="operario">Operario</option>
+            </select>
+
+            <!-- Menú desplegable dinámico -->
+            <label for="valorBusqueda">Valor:</label>
+            <select id="valorBusqueda">
+                <option value="">Elegir</option> <!-- Opción en blanco inicial -->
+            </select>
+
+            <!-- Nuevo filtro de Estado -->
+            <label for="estadoBusqueda">Estado:</label>
+            <select id="estadoBusqueda">
+                <option value="todas">Todas</option>
+                <option value="en proceso">En Proceso</option>
+                <option value="terminado">Terminado</option>
+            </select>
+
+            <button type="submit" class="btn-primary">Buscar</button>
+        </form>
+    </div>
+
+    <!-- Resultados de búsqueda -->
+    <div class="resultados-container">
+        <h2>Lista de Piezas en Producción</h2>
+        <table id="resultadosTabla">
+            <thead>
+                <tr>
+                    <th>Número de Plano</th>
+                    <th>Número de Plano del Cliente</th>
+                    <th>Cliente</th>
+                    <th>Número de Pedido</th>
+                    <th>Estado</th> <!-- Nueva columna de Estado -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se llenarán los resultados de búsqueda -->
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>© 2024 Pedro Giacomelli S.A.</p>
+    </footer>
+
+    <!-- Script para manejar la búsqueda -->
+    <script src="../js/gerencia.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+/* Estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header h1 {
+    color: #1a3b5d;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo del botón "Atrás" */
+.atras-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px; /* A la izquierda del encabezado */
+    background-color: #e74c3c; /* Color rojo claro */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover para el botón "Atrás" */
+.atras-btn:hover {
+    background-color: #c0392b; /* Rojo más oscuro al pasar el cursor */
+}
+
+/* Estilos del encabezado general */
+header {
+    position: relative;
+    background-color: rgba(44, 62, 80, 0.7); /* Fondo semi-transparente */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* Contenedor del buscador */
+.buscador-container {
+    width: 70%; /* Reducido a 70% para hacerlo menos ancho */
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Formularios */
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #1a3b5d;
+}
+
+input, select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Botón de búsqueda */
+.btn-primary {
+    background-color: #1a3b5d;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #14426c;
+}
+
+/* Contenedor de la lista de piezas en producción y resultados de búsqueda */
+.resultados-container, .lista-piezas-container {
+    width: 65%; /* Reducido a 65% para centrar y hacer menos ancho */
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px auto; /* Margen automático para centrar */
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabla de producción */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+table th {
+    background-color: #1a73e8;
+    color: white;
+}
+
+table tr:hover {
+    background-color: #eaf1f9;
+}
+
+/* Detalles */
+.detalles {
+    margin-top: 10px;
+    background-color: #f7f7f7;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.detalles h4 {
+    color: #1a3b5d;
+}
+
+.detalles p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.detalles span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+    background-color: #f9fbfd;
+    border-top: 1px solid #ddd;
+    color: #555;
+}
+
+/* --- CSS responsive para pantallas pequeñas --- */
+@media (max-width: 768px) {
+    .buscador-container, .resultados-container, .lista-piezas-container {
+        width: 95%; /* Ajusta el contenedor en pantallas pequeñas */
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    input, select, .btn-primary {
+        width: 100%; /* Formularios y botones al 100% del ancho en pantallas pequeñas */
+        margin-bottom: 10px;
+    }
+
+    table th, table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}

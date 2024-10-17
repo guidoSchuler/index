@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Operaciones</title>
+    <link rel="stylesheet" href="../css/movimientos.css">
+</head>
+<body>
+    <header>
+        <a href="../html/index.html" class="atras-btn">Atrás</a>
+        <h1>Registro de operaciones</h1>
+    </header>
+
+    <!-- Formulario de registro de movimiento -->
+    <div class="registro-container">
+        <h2>Registrar Operacion</h2>
+        <form id="registroMovimiento" onsubmit="registrarMovimiento(); return false;">
+            <!-- Número de Plano -->
+            <label for="numero_plano">Número de Plano:</label>
+            <select id="numero_plano" name="numero_plano">
+                <option value="D137500000" data-plano-cliente="P132400009" data-cliente="Scania S.A." data-pedido="866">D137500000 (Scania S.A., Pedido: 866)</option>
+                <option value="S060600000" data-plano-cliente="S54321-02" data-cliente="Kennametal" data-pedido="678">S060600000 (Kennametal, Pedido: 678)</option>
+                <option value="D138500001" data-plano-cliente="P12345001" data-cliente="Scania S.A." data-pedido="789">D138500001 (Scania S.A., Pedido: 789)</option>
+                <option value="D138500002" data-plano-cliente="P54321002" data-cliente="Scania S.A." data-pedido="790">D138500002 (Scania S.A., Pedido: 790)</option>
+                <option value="S061600000" data-plano-cliente="P65432003" data-cliente="Kennametal" data-pedido="679">S061600000 (Kennametal, Pedido: 679)</option>
+            </select>
+
+            <!-- Operario -->
+            <label for="operario">Operario:</label>
+            <select id="operario" name="operario">
+                <option value="Barbali Jorge">Barbali Jorge</option>
+                <option value="Barsamello Flavia">Barsamello Flavia</option>
+                <option value="Bravo Leonardo">Bravo Leonardo</option>
+                <option value="Giacomelli Franco">Giacomelli Franco</option>
+                <option value="Harrison Federico">Harrison Federico</option>
+                <option value="Irusta Carlos">Irusta Carlos</option>
+                <option value="Mendoza Federico">Mendoza Federico</option>
+                <option value="Moyano Guillermo">Moyano Guillermo</option>
+                <option value="Peralta Ricardo">Peralta Ricardo</option>
+                <option value="Rearte Cristian">Rearte Cristian</option>
+                <option value="Schuler Guido">Schuler Guido</option>
+                <option value="Vilchez Juan">Vilchez Juan</option>
+            </select>
+
+            <!-- Operación -->
+            <label for="operacion">Operación:</label>
+            <select id="operacion" name="operacion">
+                <option value="diseño">Diseño</option>
+                <option value="corte_preparacion">Corte + Preparación</option>
+                <option value="torno_convencional">Torno Convencional</option>
+                <option value="torno_cnc">Torno CNC</option>
+                <option value="fresa_convencional">Fresa Convencional</option>
+                <option value="fresa_cnc">Fresa CNC</option>
+                <option value="rectificado">Rectificado</option>
+                <option value="afilado">Afilado</option>
+                <option value="soldadura">Soldadura</option>
+                <option value="pavonado">Pavonado</option>
+                <option value="inspeccion_control">Inspección y Control</option>
+                <option value="armado_embalado">Armado y Embalado</option>
+                <option value="trabajo_general">Trabajo General</option>
+                <option value="trabajo_terceros">Trabajo de Terceros</option>
+            </select>
+
+            <button type="submit" class="btn-primary">Registrar Operación</button>
+        </form>
+    </div>
+
+    <!-- Historial de movimientos -->
+    <div class="historial-container">
+        <h2>Historial de Movimientos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Número de Plano</th>
+                    <th>Número de Plano del Cliente</th>
+                    <th>Cliente</th>
+                    <th>Número de Pedido</th>
+                </tr>
+            </thead>
+            <tbody id="historialMovimientos">
+                <!-- Movimientos registrados aparecerán aquí -->
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>© 2024 Pedro Giacomelli S.A</p>
+    </footer>
+
+    <!-- Script para manejar el registro y el historial -->
+    <script src="../js/movimientos.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../fondo inicio/fondo inicio.jpg'); /* Imagen de fondo */
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegurar que la página ocupe al menos el alto de la ventana */
+}
+
+/* Evitar desbordamiento horizontal */
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Encabezado */
+header {
+    background-color: rgba(44, 62, 80, 0.7);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Necesario para colocar los botones correctamente */
+    box-sizing: border-box;
+}
+
+/* Botón de Cerrar Sesión */
+.cerrar-sesion-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover para el botón de Cerrar Sesión */
+.cerrar-sesion-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Botón de Notificaciones */
+.notificaciones-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+/* Hover para el botón de Notificaciones */
+.notificaciones-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Estilo del contador de notificaciones */
+.contador-notificaciones {
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 12px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+/* Contenedor de botones */
+.botones-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    flex-grow: 1; /* Empujar el contenido hacia arriba para que el footer quede al final */
+}
+
+/* Estilo de los botones */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 15px;
+    background-color: #1a3b5d;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* Animación al pasar el cursor (hover) */
+.btn:hover {
+    background-color: #14426c;
+    transform: scale(1.05);
+}
+
+/* Animación al hacer clic (active) */
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Pie de página (sticky footer) */
+footer {
+    background-color: rgba(44, 62, 80, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    margin-top: auto; /* Esto asegura que el footer esté al final */
+    box-sizing: border-box;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Bienvenida</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <header>
+        <button class="cerrar-sesion-btn">Cerrar Sesión</button>
+        <h1>Bienvenido al Sistema de Registro y Seguimiento de Piezas</h1>
+        <!-- Botón de Notificaciones con contador -->
+        <a href="../html/notificaciones.html" class="notificaciones-btn">
+            Notificaciones
+            <span id="contadorNotificaciones" class="contador-notificaciones"></span> <!-- Mostrador de notificaciones -->
+        </a>
+    </header>
+
+    <!-- Contenedor de botones -->
+    <div class="botones-container">
+        <a href="../html/registrarpieza.html" class="btn">Registrar Pieza a Fabricar</a>
+        <a href="../html/listaproduccion.html" class="btn">Lista de Piezas en Fabricación</a>
+        <a href="../html/movimientos.html" class="btn">Registro de Operaciones de Fabricación</a>
+        <a href="../html/gerencia.html" class="btn">Informes</a>
+    </div>
+
+    <footer>
+        <p>© 2024 Pedro Giacomelli S.A</p>
+    </footer>
+
+    <!-- Script para cambiar dinámicamente el número de notificaciones -->
+    <script>
+        const notificacionesPendientes = 2; // Cambia este número según el total de notificaciones
+        document.getElementById('contadorNotificaciones').textContent = notificacionesPendientes;
+    </script>
+</body>
+</html>
